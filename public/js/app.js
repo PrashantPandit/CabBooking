@@ -10,6 +10,8 @@ var app = angular.module('cabReg', ['ngRoute']);
 
 require('../css/app.css');
 
+require('../css/app1.scss');
+
 require('./controller');
 
 app.config(function ($routeProvider) {
