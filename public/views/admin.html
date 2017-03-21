@@ -1,1 +1,64 @@
-<h1 id="qwer">admin</h1>
+<div class="container">
+
+  <div class="column">
+
+    <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
+
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+
+        <div class="list-group">
+
+          <a href="#" class="list-group-item active text-center">
+            Driver Details
+          </a>
+
+          <a href="#" class="list-group-item text-center">
+
+            Car Details
+          </a>
+          <a href="#" class="list-group-item text-center">
+            Offers
+          </a>
+        </div>
+
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+
+        <div class="bhoechie-tab-content active">
+          <center>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th> Driver Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> <input ng-model= "cabr.cabrdriverName"/></td>
+                  <td> <input ng-model= "cabr.cabrdriverAge"/></td>
+                  <td> <input ng-model= "cabr.cabrdriverGender"/></td>
+
+                  <td><button ng-click="addData(cabr)" class="btn btn-primary">Add</button></td>
+                </tr>
+
+                <tr ng-repeat="cabr in cabrList">
+                  <td>{{cabr.cabrdriverName}}</td>
+                  <td>{{cabr.cabrdriverAge}}</td>
+                  <td><button ng-click="deleteData(cabr)" class="btn btn-danger">Remove</button></td>
+							    <td><button ng-click="editData(cabr)" class="btn btn-primary">Edit</button></td>
+
+            </table>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

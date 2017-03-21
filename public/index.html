@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArzo7-9imxFiXYgAd07ThabtKl6kSAZuk&libraries=places" ></script>
+    <script type="text/javascript" src="/build/bundle.js"></script>
 
     <title>cab Registration</title>
+
   </head>
-  <body ng-app="cabReg">
-   <div>
-     <header>
-            <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand"  href="#/">cab reg</a>
-                </div>
+  <body ng-app="myApp">
 
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#/home"> Home</a></li>
-
-
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-
-                    <li  class="dropdown"><a href="#/admin">Admin</a></li>
-
+<div class="header">
+   <div class="headerGrid">
+        <div class="logo">
+          <h2 class="logoh1"><span class="logoSpan">Cab</span>Booking</h2>
+        </div>
+        <div class="signIn">
+          <ul>
+            <li><a href="#/" class="pop-up-with-zoom">Sign In</a></li>
+            <li><b style="font-size:16px;">Call Us : </b><span>12334-5678</span></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
 
 
-                </ul>
-            </div>
-            </nav>
-        </header>
-   </div>
+<div class="row">
+  <div class="top-bar top-bar-default small-12 large-12 coloumns">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon dark" type="button" data-toggle></button>
+      </span>
+    </div>
+</div>
+
+    <div id="responsive-menu" class="collapse  top-bar-right large-12 coloumns">
+      <nav>
+        <ul class="nav nav-ul">
+          <li class="active"><a href="#/" class="hvr-sweep-to-bottom">Home</a></li>
+          <li><a href="#/admin" class="hvr-sweep-to-bottom">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+
+</div>
+
+
 <div ng-view></div>
-<script type="text/javascript" src="/build/bundle.js"></script>
 
   </body>
 </html>

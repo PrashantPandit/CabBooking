@@ -2,9 +2,14 @@ var logger = require('morgan');
 var express = require('express');
 var bodyParser = require('body-parser');
 
+var DriverCrud = require('./routes/driver-CRUD');
+
+
 var app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
+app.use('/cabr/', DriverCrud)
+
 
 var mongo = require('mongodb');
 var mongoose = require('mongoose');

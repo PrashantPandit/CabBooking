@@ -1,18 +1,26 @@
 'use strict';
 
 window.$ = window.jQuery = require('jquery');
-require('bootstrap');
+$(document).foundation();
+
+
 
 var angular = require('angular');
               require('angular-route');
 
-var app = angular.module('cabReg', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute']);
 
+
+require('../css/foundation.css');
 require('../css/app.css');
-
-require('../css/app1.scss');
-
 require('./controller');
+require('./service');
+require('./vendor/foundation.js');
+require('./vendor/foundation.min.js');
+require('./vendor/what-input.js');
+
+
+
 
 app.config(function ($routeProvider) {
 
@@ -29,10 +37,11 @@ app.config(function ($routeProvider) {
     })
 
   .otherwise({
-    redirectTo : '/home'
+    redirectTo : '/home',
   });
 
 });
+
 
 
 if (module.hot) {
