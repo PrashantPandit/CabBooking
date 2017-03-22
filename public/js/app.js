@@ -1,7 +1,6 @@
 'use strict';
 
 window.$ = window.jQuery = require('jquery');
-$(document).foundation();
 
 
 
@@ -15,8 +14,10 @@ require('../css/foundation.css');
 require('../css/app.css');
 require('./controller');
 require('./service');
+
 require('./vendor/foundation.js');
 require('./vendor/foundation.min.js');
+$(document).foundation();
 require('./vendor/what-input.js');
 
 

@@ -172,8 +172,20 @@ nav.top-bar.top-bar-default {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
+/*Admin*/
+.rvldvr{
+  display: inherit;
+}
+.dvrimg{
+  background-color: #D3D3D3;
+  border-width: thin;
+}
 
-
+/*.dvrdtl{
+  margin-bottom: 3px;
+  margin-right: 2px;
+}*/
+/*Admin end*/
 
 #map{
     height:500px;

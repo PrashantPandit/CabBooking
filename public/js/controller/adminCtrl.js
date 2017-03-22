@@ -26,6 +26,29 @@ module.exports = function($scope, $http, $filter, AdminCrud){
         })
       }
 
+      $scope.deleteData= function(model){
+      var serviceName = (Object.keys(model)[1]).substring(0,4);
+      var promise =  AdminCrud.deleteData(model, serviceName);
+      promise.then(function(data){
+        dataRefresh([serviceName]);
+      })
+      }
+
+      $scope.editData = function(model){
+        var serviceName = (Object.keys(model)[1]).substring(0,4);
+        var promise =  AdminCrud.editData(model, serviceName);
+        promise.then(function(data){
+        $scope[serviceName] = data[0];
+        })
+      }
+
+      $scope.updateData = function(model){
+        var serviceName = (Object.keys(model)[1]).substring(0,4);
+        var promise =  AdminCrud.updateData(model, serviceName);
+        promise.then(function(data){
+        dataRefresh([serviceName]);
+        })
+      }
 
 
 }

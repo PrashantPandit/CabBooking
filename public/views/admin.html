@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
   <div class="column">
 
@@ -61,4 +61,83 @@
 
   </div>
 
+</div> -->
+
+
+
+<div class="row collapse">
+  <div class="medium-3 columns">
+    <ul class="tabs vertical" id="example-vert-tabs" data-tabs>
+      <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">Driver Details</a></li>
+      <li class="tabs-title"><a href="#panel2v">Car Details</a></li>
+      <li class="tabs-title"><a href="#panel3v">Cab Fare</a></li>
+      <li class="tabs-title"><a href="#panel4v">Peak Hours</a></li>
+
+    </ul>
+  </div>
+  <div class="medium-9 columns">
+    <div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
+      <div class="tabs-panel is-active" id="panel1v">
+        <a class="button expanded" data-open="exampleModal2">Add Driver Details</a>
+          <div class="reveal rvldvr" id="exampleModal2" data-reveal>
+          <div class="small-6 column dvrdtl">
+         <label>Driver Name :</label><input ng-model= "cabr.cabrdriverName"/>
+         <label>Driver Age :</label><input ng-model= "cabr.cabrdriverAge"/>
+         <label>Gender :</label><input ng-model= "cabr.cabrdriverGender"/>
+         <label>Mobile No :</label><input ng-model= "cabr.cabrdriverPhoneno"/>
+         <label>License No :</label><input ng-model= "cabr.cabrdriverLicenseno"/>
+         <label>Email ID :</label><input ng-model= "cabr.cabrdriverEmail"/>
+       </div>
+       <div class="small-6 column dvrimg flex">Upload Image</div>
+       <div class="dvrbtn">
+        <button ng-click="addData(cabr)" class="button primary small expanded">Add</button>
+      </div>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+
+        </button>
+
+        </div>
+
+        <div>
+
+          <table >
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Gender</td>
+                <td>Mobile</td>
+                <td>License No.</td>
+                <td>Email</td>
+                <td>Operation</td>
+              </tr>
+            </thead>
+            <tr ng-repeat="cabr in cabrList">
+              <td>{{cabr.cabrdriverName}}</td>
+              <td>{{cabr.cabrdriverAge}}</td>
+              <td>{{cabr.cabrdriverGender}}</td>
+              <td>{{cabr.cabrdriverPhoneno}}</td>
+              <td>{{cabr.cabrdriverLicenseno}}</td>
+              <td>{{cabr.cabrdriverEmail}}</td>
+
+              <td><button ng-click="deleteData(cabr)" class="button secondary">Remove</button></td>
+            </tr>
+          </table>
+        </div>
+<br>
+<br>
+<br>
+      </div>
+      <div class="tabs-panel" id="panel2v">
+        
+      </div>
+      <div class="tabs-panel" id="panel3v">
+        <!-- <img class="thumbnail" src="assets/img/generic/rectangle-3.jpg"> -->
+      </div>
+      <div class="tabs-panel" id="panel4v">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
 </div>
